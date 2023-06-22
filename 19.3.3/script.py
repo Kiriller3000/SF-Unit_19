@@ -1,4 +1,4 @@
-from extentions import got_response
+from extentions import got_response, data
 
 # GET RESPONSE
 get_headers = {'accept': 'application/json'}
@@ -11,19 +11,8 @@ got_response(url, 'get', headers=get_headers, params=params)
 # POST RESPONSE
 url = 'https://petstore.swagger.io/v2/user/createWithList'
 post_headers = {'accept': 'application/json', 'Content-Type': 'application/json'}
-username = 'name'
-data = [
-  {
-    "id": 0,
-    "username": f"{username}",
-    "firstName": "FName",
-    "lastName": "LName",
-    "email": "wefw@sdvs.tk",
-    "password": "passw0rd",
-    "phone": "+1(156)651-651-651",
-    "userStatus": 0
-  }
-]
+username = data[0]['username']
+
 got_response(url, 'post', headers=post_headers, json=data)
 
 
