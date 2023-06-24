@@ -5,7 +5,7 @@ POST_HEADERS = {'accept': 'application/json', 'Content-Type': 'application/json'
 
 # GET RESPONSE
 params = {'status': 'sold'}
-url = 'https://petstore.swagger.io/v2/pet/findByStatus?status=sold'
+url = 'https://petstore.swagger.io/v2/pet/findByStatus'
 
 got_response(url, 'get', headers=GET_HEADERS, params=params)
 
