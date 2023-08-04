@@ -11,7 +11,7 @@ def got_response(url: str, method: str, **kwargs):
         response = requests.delete(url, **kwargs)
     else:
         exit('Не допустимый метод')
-    return print('\n Статус код: ', response.status_code,'\n',f'Ответ на {method} запрос: ', response.json())
+    print('\n Статус код: ', response.status_code,'\n',f'Ответ на {method} запрос: ', response.json())
 
 data = [
   {
